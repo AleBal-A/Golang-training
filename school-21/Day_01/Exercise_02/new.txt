@@ -1,0 +1,3 @@
+/etc/stove/config.xml
+/Users/baker/recipes/database.xml
+/Users/baker/New_New_new.txt

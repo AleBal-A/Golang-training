@@ -1,0 +1,2 @@
+/etc/stove/config.xml
+/etc/stove/No_need_file.txt
