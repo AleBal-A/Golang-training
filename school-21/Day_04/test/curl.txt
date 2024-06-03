@@ -1,0 +1,1 @@
+curl -s --key candy.tld/key.pem --cert candy.tld/cert.pem --cacert minica.pem -XPOST -H "Content-Type: application/json" -d '{"candyType": "NT", "candyCount": 2, "money": 34}' "https://candy.tld:3333/buy_candy
