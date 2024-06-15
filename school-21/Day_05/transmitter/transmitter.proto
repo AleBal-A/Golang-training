@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package transmitter;
+
+option go_package = "./transmitter";
+
+import "google/protobuf/timestamp.proto";
+
+service TransmitterService {
+  rpc Transmit (TransmitRequest) returns (stream TransmitResponse);
+}
+
+message TransmitRequest {
+  string client_id = 1;
+}
+
+message TransmitResponse {
+  string session_id = 1;
+  double frequency = 2;
+  google.protobuf.Timestamp timestampUTC = 3;
+}
