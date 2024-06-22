@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>My Blog</h1>
+
+{{range .Articles}}
+<article>
+    <h2>{{.Title}}</h2>
+    <p>{{.Content}}</p>
+    <img src="/images/my_cat.png" alt="My Cat" class="cat-image">
+</article>
+{{else}}
+<p>No articles found.</p>
+{{end}}
+
+<div class="pagination">
+    {{if gt .CurrentPage 1}}
+    <a href="/?page={{.PreviousPage}}">Previous</a>
+    {{end}}
+
+    <span>Page {{.CurrentPage}} of {{.TotalPages}}</span>
+
+    {{if lt .CurrentPage .TotalPages}}
+    <a href="/?page={{.NextPage}}">Next</a>
+    {{end}}
+</div>
+</body>
+</html>
